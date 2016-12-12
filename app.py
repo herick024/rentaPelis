@@ -41,6 +41,7 @@ class index:
                 result = db.insert('detalle_renta', pelicula= myF['Pelicula'].value, formato= myF['Formato'].value, tiempo= myF.d.Tiempo, total= int(myF.d.Tiempo) * 20)    
                 return render.index(myF, int(myF.d.Tiempo) * 20 ,myF['Pelicula'].value, myF['Formato'].value ,myF.d.Tiempo,result)
             else:
+                 result = db.insert('detalle_renta', pelicula= myF['Pelicula'].value, formato= myF['Formato'].value, tiempo= myF.d.Tiempo, total= int(myF.d.Tiempo) * 10)
                 return render.index(myF,int(myF.d.Tiempo) * 10,myF['Pelicula'].value,myF['Formato'].value ,myF.d.Tiempo,result)
                  
                   
